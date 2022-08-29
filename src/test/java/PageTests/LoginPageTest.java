@@ -22,9 +22,5 @@ public class LoginPageTest extends TestBase {
     public void validateLoginTest() {
         crmPro().login();
     }
-
-    @Test(priority = 4)
-    public void validateLoginTest2() {
-        crmPro().login();
-    }
+    
 }
