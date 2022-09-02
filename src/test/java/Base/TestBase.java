@@ -27,7 +27,7 @@ public class TestBase {
 
     @AfterMethod
     public void closeBrowser() {
-        driver.quit();
+        //driver.quit();
     }
 
     public LoginPage crmPro() {
