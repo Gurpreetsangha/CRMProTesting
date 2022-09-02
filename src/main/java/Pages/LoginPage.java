@@ -68,7 +68,7 @@ public class LoginPage {
                 connection.connect();
                 String response = connection.getResponseMessage();
                 connection.disconnect();
-                System.out.println(element.getAttribute("href") + "---> " + response);
+                System.out.println(element.getAttribute("href") + " ---> " + response);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
