@@ -8,8 +8,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import javax.sql.rowset.BaseRowSet;
-
 public class HomePage {
     WebDriver driver = Browser.driver;
 
@@ -26,4 +24,6 @@ public class HomePage {
         newContactLink.click();
         return PageFactory.initElements(driver, ContactPage.class);
     }
+
+
 }
