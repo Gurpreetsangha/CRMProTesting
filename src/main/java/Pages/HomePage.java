@@ -19,11 +19,15 @@ public class HomePage {
 
     public ContactPage navigateToContactPage() {
         Util.switchFrame();
-        Actions action = new Actions(driver);
-        action.moveToElement(contactLink).build().perform();
-        newContactLink.click();
+        contactLink.click();
         return PageFactory.initElements(driver, ContactPage.class);
     }
 
-
+    public NewContactPage navigateToNewContactPage() {
+        Util.switchFrame();
+        Actions action = new Actions(driver);
+        action.moveToElement(contactLink).build().perform();
+        newContactLink.click();
+        return PageFactory.initElements(driver, NewContactPage.class);
+    }
 }

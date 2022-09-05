@@ -1,6 +1,6 @@
 package Informations;
 
-public class Info {
+public class LoginInformation {
 
     public static String Browser = "Chrome";
     public static final String URL = "https://classic.freecrm.com/index.html";

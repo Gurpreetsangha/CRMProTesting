@@ -11,4 +11,11 @@ public class HomePageTest extends TestBase {
                 .login()
                 .navigateToContactPage();
     }
+
+    @Test
+    public void newContactPageTest() {
+        crmPro()
+                .login()
+                .navigateToNewContactPage();
+    }
 }
