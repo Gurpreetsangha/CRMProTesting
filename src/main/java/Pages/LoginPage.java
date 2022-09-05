@@ -1,7 +1,7 @@
 package Pages;
 
 import Browser.Browser;
-import Informations.Info;
+import Informations.LoginInformation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,6 +30,9 @@ public class LoginPage {
 
     @FindBy(css = ".btn.btn-small")
     WebElement loginButton;
+
+    @FindBy(linkText = "Sign Up")
+    WebElement signUpLink;
 
     public LoginPage verifyHomeLink() {
         Assert.assertTrue(homeLink.isDisplayed(), "Home link is not found");
@@ -77,9 +80,14 @@ public class LoginPage {
         return this;
     }
 
+    public SignUpPage navigateToSignUpPage() {
+        signUpLink.click();
+        return PageFactory.initElements(driver, SignUpPage.class);
+    }
+
     public HomePage login() {
-        userName.sendKeys(Info.USER_NAME);
-        passWord.sendKeys(Info.PASS_WORD);
+        userName.sendKeys(LoginInformation.USER_NAME);
+        passWord.sendKeys(LoginInformation.PASS_WORD);
         loginButton.click();
         return PageFactory.initElements(driver, HomePage.class);
     }

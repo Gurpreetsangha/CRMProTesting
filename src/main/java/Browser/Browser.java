@@ -1,6 +1,6 @@
 package Browser;
 
-import Informations.Info;
+import Informations.LoginInformation;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +11,7 @@ public class Browser {
 
     public static WebDriver initializeBrowser() {
 
-        String browser = Info.Browser;
+        String browser = LoginInformation.Browser;
 
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
