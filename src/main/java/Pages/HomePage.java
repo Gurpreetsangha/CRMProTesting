@@ -17,6 +17,18 @@ public class HomePage {
     @FindBy(css = "a[title='New Contact']")
     WebElement newContactLink;
 
+    @FindBy(xpath = "//a[contains(text(), 'Calendar')]")
+    WebElement CalendarLink;
+
+    @FindBy(xpath = "//a[contains(text(), 'New Event')]")
+    WebElement NewEventLink;
+
+    @FindBy(xpath = "//a[contains(text(), 'View Today')]")
+    WebElement ViewTodayLink;
+
+    @FindBy(xpath = "//a[contains(text(), 'Month View')]")
+    WebElement MonthViewLink;
+
     public ContactPage navigateToContactPage() {
         Util.switchFrame();
         contactLink.click();
@@ -29,5 +41,13 @@ public class HomePage {
         action.moveToElement(contactLink).build().perform();
         newContactLink.click();
         return PageFactory.initElements(driver, NewContactPage.class);
+    }
+
+    public CalenderPage navigateToCalendar(){
+        Util.switchFrame();
+        Actions actions=new Actions(driver);
+        actions.moveToElement(CalendarLink).build().perform();
+        CalendarLink.click();
+        return PageFactory.initElements(driver, CalenderPage.class);
     }
 }
